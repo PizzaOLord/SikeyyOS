@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#100d19">
+    <title>SikeyyOS Desktop</title>
+    <link rel="stylesheet" href="desktop.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body class="desktop-page">
+
+    <!-- Top system panel -->
+    <header class="topbar">
+        <a class="brand" href="index.html">
+            Sikeyy<span>OS</span>
+        </a>
+
+        <span class="desktop-label">DESKTOP</span>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            <span>Online</span>
+            <span class="top-clock" id="clock">00:00</span>
+        </div>
+    </header>
+
+    <!-- Desktop workspace -->
+    <main class="os-desktop" id="desktop">
+
+        <!-- Desktop application icon -->
+        <button class="desktop-icon" id="calculator-icon"
+                aria-label="Open Calculator">
+            <span class="desktop-icon-art">＋</span>
+            <span>Calculator</span>
+        </button>
+
+        <!-- Calculator application window -->
+        <section class="app-window" id="calculator-window"
+                 aria-label="Calculator" hidden>
+
+            <header class="app-titlebar" id="calculator-titlebar">
+                <div class="window-controls">
+                    <button class="window-dot close-dot"
+                            id="close-calculator"
+                            aria-label="Close calculator"></button>
+
+                    <button class="window-dot minimize-dot"
+                            id="minimize-calculator"
+                            aria-label="Minimize calculator"></button>
+
+                    <button class="window-dot maximize-dot"
+                            id="maximize-calculator"
+                            aria-label="Maximize calculator"></button>
+                </div>
+
+                <span class="app-title">Calculator</span>
+                <span class="titlebar-spacer"></span>
+            </header>
+
+            <div class="calculator">
+
+                <div class="calculator-display">
+                    <div class="previous-expression" id="previous-expression">
+                        &nbsp;
+                    </div>
+
+                    <output class="current-value" id="display"
+                            aria-live="polite">0</output>
+                </div>
+
+                <div class="calculator-grid">
+                    <button class="calc-key utility" data-action="clear">AC</button>
+                    <button class="calc-key utility" data-action="delete">DEL</button>
+                    <button class="calc-key utility" data-action="percent">%</button>
+                    <button class="calc-key operator" data-action="operator" data-value="/">÷</button>
+
+                    <button class="calc-key" data-action="digit" data-value="7">7</button>
+                    <button class="calc-key" data-action="digit" data-value="8">8</button>
+                    <button class="calc-key" data-action="digit" data-value="9">9</button>
+                    <button class="calc-key operator" data-action="operator" data-value="*">×</button>
+
+                    <button class="calc-key" data-action="digit" data-value="4">4</button>
+                    <button class="calc-key" data-action="digit" data-value="5">5</button>
+                    <button class="calc-key" data-action="digit" data-value="6">6</button>
+                    <button class="calc-key operator" data-action="operator" data-value="-">−</button>
+
+                    <button class="calc-key" data-action="digit" data-value="1">1</button>
+                    <button class="calc-key" data-action="digit" data-value="2">2</button>
+                    <button class="calc-key" data-action="digit" data-value="3">3</button>
+                    <button class="calc-key operator" data-action="operator" data-value="+">+</button>
+
+                    <button class="calc-key utility" data-action="sign">+/−</button>
+                    <button class="calc-key" data-action="digit" data-value="0">0</button>
+                    <button class="calc-key" data-action="decimal">.</button>
+                    <button class="calc-key equals" data-action="equals">=</button>
+                </div>
+
+                <p class="keyboard-hint">ESC to clear · ENTER to calculate</p>
+            </div>
+        </section>
+
+        <!-- Taskbar: open applications appear here -->
+        <div class="taskbar" id="taskbar" aria-label="Open applications">
+            <button class="taskbar-app" id="calculator-task"
+                    aria-label="Switch to Calculator" hidden>
+                <span class="taskbar-app-icon">＋</span>
+                <span>Calculator</span>
+                <span class="taskbar-indicator"></span>
+            </button>
+        </div>
+
+        <div class="wallpaper-caption">
+            <span>SIKEYYOS</span>
+            <span>A QUIET PLACE TO CREATE.</span>
+        </div>
+
+    </main>
+
+    <!-- Bottom dock -->
+    <nav class="dock" aria-label="Desktop dock">
+        <a href="index.html" title="Welcome screen" aria-label="Welcome screen">⌂</a>
+        <button id="dock-calculator" title="Calculator"
+                aria-label="Open Calculator">＋</button>
+    </nav>
+
+</body>
+</html>
